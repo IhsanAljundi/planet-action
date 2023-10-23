@@ -21,9 +21,41 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #618264;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">🌏 Planet Action</a>
+
+      <!-- Mobile nav toggle button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content"
+        aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar content -->
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav align-items-center w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="/feeds.html">Feeds</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/create.html">Create a Post</a>
+          </li>
+
+          <!-- User profile -->
+          <li class="nav-item ms-auto">
+            <a class="nav-link" href="/profile.html">
+              <span id="nav-username" class="me-2"></span>
+              <img id="nav-avatar" class="rounded" style="width: 2rem; height: 2rem" src="/avatar.webp" alt="avatar" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #618264;">
     <div class="container">
-      <!-- <img src="img/profile.png"> -->
+      <img src="img/profile.png">
       <a class="navbar-brand" href="#">Greenpeace</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +78,7 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
   <!-- Akhir Navbar -->
 
   <!-- Profile -->
@@ -95,7 +127,45 @@
   <!-- Akhir Stat -->
 
   <!-- Latest Post -->
-  <section class="latest">
+  <div class="container py-5" style="max-width: 32rem">
+    <!-- Post list -->
+    <div id="posts-list" class="d-flex flex-column gap-4 mt-4">
+      <!-- Post template -->
+      <div class="post-template card border-2" style="display: none">
+        <img class="post-template-image card-img-top" src="/post.webp" alt="post image" />
+
+        <div class="card-body">
+          <!-- Cover image and author -->
+          <div class="d-flex align-items-center mb-2">
+            <img class="post-template-avatar rounded" style="width: 2rem; height: 2rem" src="/avatar.webp"
+              alt="avatar" />
+
+            <small class="ms-2 text-muted">
+              <span class="post-template-username text-decoration-none text-dark"></span>
+              · <span class="post-template-date"></span>
+            </small>
+          </div>
+
+          <!-- Content title & description -->
+          <h5 class="post-template-title card-title mt-3"></h5>
+          <p class="card-text mt-4">
+            <span class="post-template-description"></span>
+          </p>
+
+          <!-- Tags list -->
+          <div class="post-template-tags-list d-flex flex-wrap gap-2 mt-1"></div>
+
+          <!-- Interactions -->
+          <div class="d-flex align-items-center justify-content-end gap-2 mt-3">
+            <button class="post-template-like-button btn btn-light btn-sm rounded-pill">
+              <span class="post-template-likes"></span> ❤️
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <section class="latest">
     <div class="container">
       <h3 class="fs-1 text-center">Latest Post</h3>
       <div class="row">
@@ -141,7 +211,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Akhir Latest Post -->
 </body>
 
